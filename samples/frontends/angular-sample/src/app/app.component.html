@@ -1,0 +1,35 @@
+<div class="flex py-24 justify-center h-screen">
+  <div class="w-full max-w-lg space-y-4">
+
+    <img width="400" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+    <h1 class="text-3xl font-bold">Angular Sample</h1>
+    Try Trustcaptcha.
+
+    <br />
+
+    <form class="space-y-4" (ngSubmit)="handleSubmit()">
+      <div>
+        <label for="message" class="block text-sm font-medium leading-6 text-gray-900">Message</label>
+        <div class="mt-1">
+          <textarea rows="4" name="message" id="message" placeholder="Write a message ..." [(ngModel)]="message" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"></textarea>
+        </div>
+      </div>
+
+      <trustcaptcha-component
+        sitekey="cc2e2d5e-d1ef-4a7f-a7bd-dec5b37df47a"
+        (captchaSolved)="solved($event.detail)"
+        (captchaFailed)="failed($event.detail)"
+      ></trustcaptcha-component>
+
+      <button type="submit" class="w-full rounded-md bg-green-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500 disabled:opacity-60 disabled:hover:bg-green-500" [disabled]="!verificationToken || verificationResult">Send message</button>
+    </form>
+
+    <div *ngIf="verificationResult" class="rounded-md bg-green-50 p-4 border border-green-500">
+      <strong>Message: </strong>{{ message }}<br>
+      <strong>Passed: </strong>{{ verificationResult.verificationPassed }}<br>
+      <strong>Reason: </strong>{{ verificationResult.reason }}<br>
+      <strong>Score: </strong>{{ verificationResult.score }}<br>
+    </div>
+
+  </div>
+</div>
