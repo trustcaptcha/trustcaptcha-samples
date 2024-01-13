@@ -1,6 +1,6 @@
 # Trustcaptcha Samples
 
-t
+This repository shows exemplary implementations of Trustcaptcha with different programming languages and technologies.
 
 
 
