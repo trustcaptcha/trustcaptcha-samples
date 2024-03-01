@@ -19,11 +19,11 @@ public class SampleController {
 
         model.addAttribute("model", new PageModel());
 
-        return "page";
+        return "index";
     }
 
     @PostMapping(value = "/")
-    public String postPage(@ModelAttribute PageModel model, @RequestParam("tc-verification-token") String verificationToken, Model modelTest) {
+    public String postPage(@ModelAttribute PageModel pageModel, @RequestParam("tc-verification-token") String verificationToken, Model model) {
 
         // Retrieving the verification result
         VerificationResult verificationResult;
@@ -39,9 +39,10 @@ public class SampleController {
             logger.warn("Verification failed, or bot score is higher than 0.5 – this could indicate a bot.");
         }
 
-        modelTest.addAttribute("model", new PageModel());
-        modelTest.addAttribute("captchaSuccess", new CaptchaSuccessModel(model.getMessage(), verificationResult));
+        model.addAttribute("model", new PageModel());
+        model.addAttribute("message", pageModel.getMessage());
+        model.addAttribute("verificationResult", verificationResult);
 
-        return "page";
+        return "index";
     }
 }

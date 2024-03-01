@@ -20,27 +20,48 @@
                         <textarea class="form-control" id="messageInput" placeholder="Write a message" rows="3" th:field="*{message}"></textarea>
                     </div>
                     <div class="mb-3">
-                        <trustcaptcha-component class="mb-3" sitekey="cc2e2d5e-d1ef-4a7f-a7bd-dec5b37df47a"></trustcaptcha-component>
+                        <trustcaptcha-component
+                            id="trustcaptchaComponent"
+                            sitekey="cc2e2d5e-d1ef-4a7f-a7bd-dec5b37df47a"
+                            language="en"
+                            theme="light"
+                            autostart="active"
+                            token-field-name="myToken"
+                        ></trustcaptcha-component>
                     </div>
                     <div class="d-grid gap-2">
                         <button class="btn btn-success" id="submitButton" disabled>Post new message</button>
                     </div>
                 </form>
-                <div th:if="${captchaSuccess}" class="alert alert-success mt-3" role="alert">
-                    <strong>Message: </strong><span th:text="${captchaSuccess.getMessage()}"></span><br>
-                    <strong>Passed: </strong><span th:text="${captchaSuccess.getVerificationResult().isVerificationPassed()}"></span><br>
-                    <strong>Reason: </strong><span th:text="${captchaSuccess.getVerificationResult().getReason()}"></span><br>
-                    <strong>Score: </strong><span th:text="${captchaSuccess.getVerificationResult().getScore()}"></span>
+                <div th:if="${verificationResult}" >
+                    <div class="alert alert-success mt-3" role="alert">
+                        <strong>Message: </strong><span th:text="${message}"></span><br>
+                        <strong>Passed: </strong><span th:text="${verificationResult.isVerificationPassed()}"></span><br>
+                        <strong>Reason: </strong><span th:text="${verificationResult.getReason()}"></span><br>
+                        <strong>Score: </strong><span th:text="${verificationResult.getScore()}"></span>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-primary" onclick="reloadPage()">Reload page</button>
+                    </div>
                 </div>
             </div>
         </div>
     </body>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
    <script>
+
+       function reloadPage() {
+           window.location.href = '/'
+       }
+
+       <!-- example, unused in this sample -->
+       function resetCaptcha() {
+           const trustcaptchaComponent = document.getElementById('trustcaptchaComponent');
+           trustcaptchaComponent.reset();
+       }
+
         <!-- Handle solve and fail event -->
-        const trustcaptchaComponent = document.getElementsByTagName('trustcaptcha-component')[0];
+       const trustcaptchaComponent = document.getElementById('trustcaptchaComponent');
         trustcaptchaComponent.addEventListener('captchaSolved', (event) => {
             console.log('Verification token:', event.detail);
             const submitButton = document.getElementById('submitButton');

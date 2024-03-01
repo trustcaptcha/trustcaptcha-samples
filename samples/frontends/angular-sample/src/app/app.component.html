@@ -16,7 +16,12 @@
       </div>
 
       <trustcaptcha-component
+        #trustcaptchaComponent
         sitekey="cc2e2d5e-d1ef-4a7f-a7bd-dec5b37df47a"
+        language="en"
+        theme="light"
+        autostart="active"
+        tokenFieldName="tc-verification-token"
         (captchaSolved)="solved($event.detail)"
         (captchaFailed)="failed($event.detail)"
       ></trustcaptcha-component>
@@ -24,11 +29,14 @@
       <button type="submit" class="w-full rounded-md bg-green-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500 disabled:opacity-60 disabled:hover:bg-green-500" [disabled]="!verificationToken || verificationResult">Send message</button>
     </form>
 
-    <div *ngIf="verificationResult" class="rounded-md bg-green-50 p-4 border border-green-500">
-      <strong>Message: </strong>{{ message }}<br>
-      <strong>Passed: </strong>{{ verificationResult.verificationPassed }}<br>
-      <strong>Reason: </strong>{{ verificationResult.reason }}<br>
-      <strong>Score: </strong>{{ verificationResult.score }}<br>
+    <div *ngIf="verificationResult" class="space-y-4">
+      <div class="rounded-md bg-green-50 p-4 border border-green-500">
+        <strong>Message: </strong>{{ message }}<br>
+        <strong>Passed: </strong>{{ verificationResult.verificationPassed }}<br>
+        <strong>Reason: </strong>{{ verificationResult.reason }}<br>
+        <strong>Score: </strong>{{ verificationResult.score }}<br>
+      </div>
+      <button type="button" class="w-full rounded-md bg-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500" (click)="resetCaptcha()">Reset captcha</button>
     </div>
 
   </div>
