@@ -13,7 +13,7 @@ You can find more information on your website: [www.trustcaptcha.com](https://ww
 
 ## How does Trustcaptcha work?
 
-Detailed instructions and examples for using Trustcaptcha can be found in our [documentation](https://trustcaptcha.com/documentation).
+Detailed instructions and examples for using Trustcaptcha can be found in our [documentation](https://trustcaptcha.com/en/documentation).
 
 
 ## Samples
@@ -32,8 +32,8 @@ Detailed instructions and examples for using Trustcaptcha can be found in our [d
 
 **Note:** 
 1. Every backend application runs on port 8080, so you can combine and try out any frontend application with any backend application.
-2. If you actually want to test the captcha, remember to insert your individual site-key in the frontend code and your secret-key in the backend code.  If you don't have a captcha yet, you can create one on our [website](https://trustcaptcha.com/captchas).
+2. If you actually want to test the captcha, remember to insert your individual site-key in the frontend code and your secret-key in the backend code.  If you don't have a captcha yet, you can create one on our [website](https://trustcaptcha.com/en/captchas/dashboard).
 
 ## Ideas and support
 
-If you have any ideas, suggestions, or need support, please [contact us](https://about.trustcaptcha.com/start#contact-us).
+If you have any ideas, suggestions, or need support, please [contact us](https://about.trustcaptcha.com/en#contact-us).
