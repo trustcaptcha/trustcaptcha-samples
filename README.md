@@ -29,6 +29,7 @@ Detailed instructions and examples for using Trustcaptcha can be found in our [d
    4. Kotlin with Spring
 3. **Fullstack**
     1. Plain JavaScript with Spring and Thymeleaf
+    2. PHP
 
 **Note:** 
 1. Every backend application runs on port 8080, so you can combine and try out any frontend application with any backend application.

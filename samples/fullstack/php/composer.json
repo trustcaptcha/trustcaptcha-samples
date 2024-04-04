@@ -1,0 +1,18 @@
+{
+    "name": "trustcaptcha/php-sample",
+    "description": "PHP sample for Trustcaptcha",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Trustcaptcha\\PhpSample\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Trustcaptcha GmbH"
+        }
+    ],
+    "require": {
+        "trustcaptcha/trustcaptcha-php": "^1.0.0"
+    }
+}
