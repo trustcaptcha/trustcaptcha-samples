@@ -65,7 +65,6 @@ function App() {
                             language="en"
                             theme="light"
                             autostart="active"
-                            tokenFieldName="tc-verification-token"
                             onCaptchaSolved={event => solved(event.detail)}
                             onCaptchaFailed={event => failed(event.detail)}
                         ></TrustcaptchaComponent>

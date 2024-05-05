@@ -58,7 +58,6 @@ export default {
             language="en"
             theme="light"
             autostart="active"
-            tokenFieldName="tc-verification-token"
             @captchaSolved="solved($event.detail)"
             @captchaFailed="failed($event.detail)"
         ></trustcaptcha-component>
