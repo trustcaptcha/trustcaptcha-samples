@@ -1,0 +1,27 @@
+[package]
+name = "rust-sample"
+version = "0.1.0"
+authors = ["Trustcaptcha GmbH <mail@trustcaptcha.com>"]
+edition = "2021"
+
+[dependencies]
+actix-web = "4.0"
+actix-rt = "2.5"
+actix-cors = "0.7"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+log = "0.4"
+env_logger = "0.11.3"
+base64 = "0.22.1"
+aes = "0.7"
+block-modes = { version = "0.8.1", features = ["std"] }
+generic-array = "1.0.0"
+reqwest = { version = "0.12.4", features = ["json", "blocking"] }
+tokio = { version = "1", features = ["full"] }
+hex-literal = "0.4.1"
+uuid = { version = "1", features = ["serde"] }
+cipher = "0.4.4"
+typenum = "1.15.0"
+block-padding = "0.3.3"
+hex = "0.4"
+trustcaptcha-rust = "1.0.0"

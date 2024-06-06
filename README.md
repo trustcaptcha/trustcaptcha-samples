@@ -27,9 +27,10 @@ Detailed instructions and examples for using Trustcaptcha can be found in our [d
    2. NodeJS with Express
    3. Java with Spring
    4. Kotlin with Spring
-   4. Groovy with Spring
-   4. Scala with Spring
-   5. Go
+   5. Groovy with Spring
+   6. Scala with Spring
+   7. Go
+   8. Rust with Actix Web
 3. **Fullstack**
     1. Plain JavaScript with Spring and Thymeleaf
     2. PHP
