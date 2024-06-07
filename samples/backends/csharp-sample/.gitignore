@@ -1,0 +1,49 @@
+# Ignore build outputs
+bin/
+obj/
+
+# Ignore Rider project files
+.idea/
+.idea_modules/
+.idea/.idea.modules/
+.idea/workspace.xml
+
+# Ignore Visual Studio specific files
+.vscode/
+.vscode/settings.json
+
+# Ignore Rider specific files
+.idea/
+
+# Ignore user-specific files
+*.swp
+*~
+
+# Ignore ASP.NET Core specifics
+wwwroot/
+
+# Ignore local configuration files
+appsettings.Development.json
+
+# Ignore logs
+*.log
+
+# Ignore compiled DLLs and PDBs
+*.dll
+*.pdb
+
+# Ignore NuGet packages
+*.nupkg
+.nuget/
+
+# Ignore coverage reports
+coverage/
+
+# Ignore environment variables
+.env
+
+# Ignore Rider
+.idea/
+
+# Ignore solution files
+*.sln
