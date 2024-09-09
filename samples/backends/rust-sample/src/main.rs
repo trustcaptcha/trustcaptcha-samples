@@ -15,7 +15,7 @@ async fn post_api_example(verification_request: web::Json<VerificationRequest>) 
     info!("Received request: {:?}", verification_request);
 
     let secret_key = "<your_secret_key>";
-    let verification_token = &verification_request.verification_token; // Verwendung des korrekten Schlüssels
+    let verification_token = &verification_request.verification_token;
 
     // Retrieving the verification result
     let verification_result = match CaptchaManager::get_verification_result(secret_key, verification_token).await {
@@ -37,7 +37,7 @@ async fn post_api_example(verification_request: web::Json<VerificationRequest>) 
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    env_logger::init(); // Initialize the logger
+    env_logger::init();
 
     HttpServer::new(|| {
         let cors = Cors::default()
@@ -48,7 +48,7 @@ async fn main() -> std::io::Result<()> {
 
         App::new()
             .wrap(cors)
-            .wrap(Logger::default()) // Add Logger middleware
+            .wrap(Logger::default())
             .route("/api/example", web::post().to(post_api_example))
     })
         .bind("127.0.0.1:8080")?

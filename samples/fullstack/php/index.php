@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <meta charset="UTF-8">
         <title>Trustcaptcha Testsystem</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-        <script type="module" src="https://resources.trustcaptcha.com/trustcaptcha.js"></script>
+        <script type="module" src="https://resources.trustcaptcha.com/1_4_x/trustcaptcha.js"></script>
     </head>
     <body class="py-5">
         <div class="d-flex justify-content-center">
