@@ -54,10 +54,9 @@ export default {
 
         <trustcaptcha-component
             ref="trustcaptchaRef"
-            sitekey="cc2e2d5e-d1ef-4a7f-a7bd-dec5b37df47a"
+            sitekey="<your_site_key>"
             language="en"
             theme="light"
-            autostart="active"
             @captchaSolved="solved($event.detail)"
             @captchaFailed="failed($event.detail)"
         ></trustcaptcha-component>

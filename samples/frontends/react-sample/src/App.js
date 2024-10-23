@@ -61,10 +61,9 @@ function App() {
 
                         <TrustcaptchaComponent
                             ref={trustcaptchaRef}
-                            sitekey="cc2e2d5e-d1ef-4a7f-a7bd-dec5b37df47a"
+                            sitekey="<your_site_key>"
                             language="en"
                             theme="light"
-                            autostart="active"
                             onCaptchaSolved={event => solved(event.detail)}
                             onCaptchaFailed={event => failed(event.detail)}
                         ></TrustcaptchaComponent>
