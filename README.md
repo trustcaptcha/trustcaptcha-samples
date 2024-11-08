@@ -13,7 +13,7 @@ You can find more information on your website: [www.trustcaptcha.com](https://ww
 
 ## How does Trustcaptcha work?
 
-Detailed instructions and examples for using Trustcaptcha can be found in our [documentation](https://trustcaptcha.com/en/documentation).
+Detailed instructions and examples for using Trustcaptcha can be found in our [documentation](https://docs.trustcaptcha.com/en).
 
 
 ## Samples
@@ -43,4 +43,4 @@ Detailed instructions and examples for using Trustcaptcha can be found in our [d
 
 ## Ideas and support
 
-If you have any ideas, suggestions, or need support, please [contact us](https://about.trustcaptcha.com/en#contact-us).
+If you have any ideas, suggestions, or need support, please [contact us](https://www.trustcaptcha.com/de/contact-us).
