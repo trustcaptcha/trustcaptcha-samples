@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-import {TrustcaptchaModule} from "@trustcaptcha/trustcaptcha-angular";
+import {TrustcaptchaComponent} from "@trustcaptcha/trustcaptcha-angular";
 
 @NgModule({
   declarations: [
@@ -12,10 +12,10 @@ import {TrustcaptchaModule} from "@trustcaptcha/trustcaptcha-angular";
   ],
   imports: [
     BrowserModule,
-    TrustcaptchaModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    TrustcaptchaComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,10 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import {TrustcaptchaComponent, defineCustomElements} from "@trustcaptcha/trustcaptcha-react";
+import {TrustcaptchaComponent} from "@trustcaptcha/trustcaptcha-react";
 import {useRef, useState} from "react";
 import apiService from './apiService';
-
-defineCustomElements()
 
 
 function App() {
