@@ -14,4 +14,4 @@ php -S localhost:8080
 
 The website should then be accessible at http://localhost:8080/.
 
-**Note:** If you would like to try out the captcha, please replace the sitekey with your individual sitekey. If you don't have one yet, you can create one on our [website](https://dashboard.trustcaptcha.com/en/captchas/dashboard).
+**Note:** If you would like to try out the captcha, please replace the sitekey with your individual sitekey. If you don't have one yet, you can create one on our [website](https://dashboard.trustcomponent.com/en/solution-creation).
