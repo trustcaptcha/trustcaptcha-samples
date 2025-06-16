@@ -17,7 +17,7 @@ public class CaptchaController : ControllerBase
         try
         {
             Console.WriteLine(verificationRequest.VerificationToken);
-            verificationResult = await CaptchaManager.GetVerificationResult("3bhrZc/gHXtV1i9XGTY9k5WsroWPFizTx6ZiUn3eThI=", verificationRequest.VerificationToken);
+            verificationResult = await CaptchaManager.GetVerificationResult("<your_secret_key>", verificationRequest.VerificationToken);
             Console.WriteLine(verificationResult.VerificationPassed);
             Console.WriteLine(verificationResult.Score);
         }
