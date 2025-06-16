@@ -24,7 +24,7 @@ app.post('/api/example', async (req, res) => {
 
     // Do something with the verification result
     if (!verificationResult.verificationPassed || verificationResult.score > 0.5) {
-        console.log("Verification failed, or bot score is higher than 0.5 – this could indicate a bot.");
+        console.log("Verification failed or bot score > 0.5 – possible automated request.");
     }
 
     res.json(verificationResult);

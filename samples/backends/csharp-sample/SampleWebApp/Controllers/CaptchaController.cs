@@ -16,7 +16,10 @@ public class CaptchaController : ControllerBase
         VerificationResult verificationResult;
         try
         {
-            verificationResult = await CaptchaManager.GetVerificationResult("<your_secret_key>", verificationRequest.VerificationToken);
+            Console.WriteLine(verificationRequest.VerificationToken);
+            verificationResult = await CaptchaManager.GetVerificationResult("3bhrZc/gHXtV1i9XGTY9k5WsroWPFizTx6ZiUn3eThI=", verificationRequest.VerificationToken);
+            Console.WriteLine(verificationResult.VerificationPassed);
+            Console.WriteLine(verificationResult.Score);
         }
         catch (Exception ex)
         {
@@ -28,7 +31,7 @@ public class CaptchaController : ControllerBase
         // Do something with the verification result
         if (!verificationResult.VerificationPassed || verificationResult.Score > 0.5)
         {
-            Console.WriteLine("Verification failed, or bot score is higher than 0.5 – this could indicate a bot.");
+            Console.WriteLine("Verification failed or bot score > 0.5 – possible automated request.");
         }
 
         return Ok(verificationResult);

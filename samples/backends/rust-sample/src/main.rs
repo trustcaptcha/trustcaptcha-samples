@@ -29,7 +29,7 @@ async fn post_api_example(verification_request: web::Json<VerificationRequest>) 
 
     // Do something with the verification result
     if !verification_result.verification_passed || verification_result.score > 0.5 {
-        info!("Verification failed, or bot score is higher than 0.5 – this could indicate a bot.");
+        info!("Verification failed or bot score > 0.5 – possible automated request.");
     }
 
     Ok(HttpResponse::Ok().json(verification_result))

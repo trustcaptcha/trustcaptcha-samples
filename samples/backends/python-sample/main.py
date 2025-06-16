@@ -21,7 +21,7 @@ def post_api_example():
 
     # Do something with the verification result
     if verification_result.verificationPassed is not True or verification_result.score > 0.5:
-        print("Verification failed, or bot score is higher than 0.5 – this could indicate a bot.")
+        print("Verification failed or bot score > 0.5 – possible automated request.")
 
     return verification_result.to_json()
 

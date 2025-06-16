@@ -36,7 +36,7 @@ public class SampleController {
 
         // Do something with the verification result
         if (!verificationResult.isVerificationPassed() || verificationResult.getScore() > 0.5) {
-            logger.warn("Verification failed, or bot score is higher than 0.5 – this could indicate a bot.");
+            logger.warn("Verification failed or bot score > 0.5 – possible automated request.");
         }
 
         model.addAttribute("model", new PageModel());

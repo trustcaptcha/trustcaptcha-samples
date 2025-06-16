@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Do something with the verification result
     if (!$verificationResult->verificationPassed || $verificationResult->score > 0.5) {
-        $message = "Verification failed, or bot score is higher than 0.5 – this could indicate a bot.";
+        $message = "Verification failed or bot score > 0.5 – possible automated request.";
     }
 }
 
